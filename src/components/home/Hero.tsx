@@ -1,5 +1,6 @@
 import Icon from "@/components/ui/Icon";
 import Image from "next/image";
+import { publicAssetPath } from "@/lib/publicAssetPath";
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
         </div>
         <div className="hero-art" aria-label="Abstract illustration of connected technology systems">
           <div className="art-orbit art-orbit--one" /><div className="art-orbit art-orbit--two" /><div className="art-orbit art-orbit--three" />
-          <div className="art-core"><span className="core-ring" /><Image className="core-emblem" src="/brand/synexis-dragon-emblem.webp" alt="" width={68} height={71} /></div>
+          <div className="art-core"><span className="core-ring" /><Image className="core-emblem" src={publicAssetPath("/brand/synexis-dragon-emblem.webp")} alt="" width={68} height={71} /></div>
           <div className="art-node art-node--top"><span className="node-icon"><Icon name="spark" /></span><span className="node-line" /></div>
           <div className="art-node art-node--right"><span className="node-icon"><Icon name="systems" /></span><span className="node-line" /></div>
           <div className="art-node art-node--left"><span className="node-icon"><Icon name="code" /></span><span className="node-line" /></div>

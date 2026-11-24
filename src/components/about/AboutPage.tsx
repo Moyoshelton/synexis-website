@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAssetPath } from "@/lib/publicAssetPath";
 import Link from "next/link";
 import Icon from "@/components/ui/Icon";
 import Footer from "@/components/layout/Footer";
@@ -73,7 +74,7 @@ export default function AboutPage() {
             <div className={styles.heroVisual} aria-hidden="true">
               <span className={styles.heroVisualIndex}>ORIGIN / 01</span>
               <span className={styles.heroOrbit} />
-              <Image className={styles.heroDragon} src="/brand/synexis-dragon-emblem.webp" alt="" width={300} height={314} priority />
+              <Image className={styles.heroDragon} src={publicAssetPath("/brand/synexis-dragon-emblem.webp")} alt="" width={300} height={314} priority />
               <span className={styles.heroVisualCaption}>INDEPENDENCE &middot; EXPLORATION &middot; CREATION</span>
             </div>
           </div>

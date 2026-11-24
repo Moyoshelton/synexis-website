@@ -1,5 +1,6 @@
 import Icon from "@/components/ui/Icon";
 import Image from "next/image";
+import { publicAssetPath } from "@/lib/publicAssetPath";
 import Link from "next/link";
 
 const mainLinks: Array<[string, string]> = [
@@ -28,7 +29,7 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-brand-col">
             <Link className="footer-logo-link" href="/" aria-label="Synexis Technologies home">
-              <Image className="footer-emblem" src="/brand/synexis-dragon-emblem.webp" alt="" width={48} height={50} />
+              <Image className="footer-emblem" src={publicAssetPath("/brand/synexis-dragon-emblem.webp")} alt="" width={48} height={50} />
               <span className="footer-brand-copy">
                 <span className="footer-wordmark">SYNEXIS<span>TECHNOLOGIES</span></span>
                 <span className="footer-tagline">Beyond the Expected.</span>
